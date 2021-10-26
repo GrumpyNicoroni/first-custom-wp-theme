@@ -1,5 +1,27 @@
 <?php
 
+if ( ! function_exists( 'mytheme_setup' ) ) :
+
+function mytheme_setup() {
+
+    load_theme_textdomain( 'mytheme', get_template_directory(  ) . '/languages' );
+
+    add_theme_support( 'automatic-feed-links' );
+    
+    add_theme_support( 'post-thumbnails' );
+
+    register_nav_menus( array(
+        'primary' => __( 'Primary Menu', 'mytheme' ),
+        'secondary' => __( 'Secondary Menu', 'mytheme' )
+    ) );
+
+    add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image','video' ) );
+}
+
+endif;
+
+add_action( 'after_setup_theme', 'mytheme_setup' );
+
 function mytheme_register_styles() {
     wp_enqueue_style (
         'main-style',
