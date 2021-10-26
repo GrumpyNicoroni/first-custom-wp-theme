@@ -1,4 +1,17 @@
 <?php
+/**
+ * MyTheme's functions and definitions
+ * 
+ * @pacakge MyTheme
+ * @since MyTheme 1.0
+ */
+
+ /**
+  * Maximum content width
+  */
+
+if ( ! isset( $content_width ) ) 
+    $content_width = 800; /* pixels */
 
 if ( ! function_exists( 'mytheme_setup' ) ) :
 
@@ -10,10 +23,12 @@ function mytheme_setup() {
     
     add_theme_support( 'post-thumbnails' );
 
-    register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'mytheme' ),
-        'secondary' => __( 'Secondary Menu', 'mytheme' )
-    ) );
+    register_nav_menus( 
+        array(
+            'primary' => __( 'Primary Menu', 'mytheme' ),
+            'secondary' => __( 'Secondary Menu', 'mytheme' )
+        )
+    );
 
     add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image','video' ) );
 }
