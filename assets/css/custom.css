@@ -1,0 +1,39 @@
+header {
+    background-color: var(--main-bg-color);
+}
+
+#intro, #features, #utility, #above, #testimonials, #expanded, #footer {
+    min-height: 200px;
+}
+
+#intro {
+    background-color: white;
+}
+
+#features {
+    background-color: hsl(0, 0%, 95%);
+}
+
+#utility {
+    background-color: hsl(0, 0%, 90%);
+}
+
+#above {
+    background-color: hsl(0, 0%, 85%);
+}
+
+#testimonials {
+    background-color: hsl(0, 0%, 80%);
+}
+
+#expanded {
+    background-color: hsl(0, 0%, 75%);
+}
+
+#footer {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.hero {
+}
+

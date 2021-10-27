@@ -40,11 +40,15 @@ add_action( 'after_setup_theme', 'mytheme_setup' );
 function mytheme_register_styles() {
     wp_enqueue_style (
         'main-style',
-        get_template_directory_uri() . '/style.css', array('bootstrap'));
+        get_template_directory_uri() . '/style.css', array('bootstrap', 'colors-style'));
 
     wp_enqueue_style (
         'custom-style',
-        get_template_directory_uri() . '/assets/css/custom.css');
+        get_template_directory_uri() . '/assets/css/custom.css',
+        array(),
+        '1.0'
+    );
+    wp_enqueue_style( 'colors-style', get_template_directory_uri() . '/assets/css/colors.css', array(), '1.0' );
 
     wp_enqueue_style(
         'bootstrap',
